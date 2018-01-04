@@ -2,21 +2,22 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark green">
   
 <!-- Navbar brand -->
-<logo><a class="navbar-brand" href="#">Navbar</a></logo>
+<logo><a class="navbar-brand" href="#">Find Trash</a></logo>
 
 <!-- Collapsible content -->
 <links>
 
 <!-- Links -->
 <ul class="navbar-nav mr-auto">
-   <li class="nav-item active">
-       <a class="nav-link waves-light" mdbRippleRadius>Home<span class="sr-only">(current)</span></a>
+   <li class="nav-item" [routerLinkActive]="['active']">
+       <a [routerLink]="['/home']" class="nav-link waves-light"  mdbRippleRadius>Home<span class="sr-only">(current)</span></a>
    </li>
-   <li class="nav-item">
-       <a class="nav-link waves-light" mdbRippleRadius>Features</a>
+   <li class="nav-item" [routerLinkActive]="['active']">
+       <a [routerLink]="['/find-trash']" class="nav-link waves-light" href="/#/find-trash" mdbRippleRadius>Find trash</a>
    </li>
-   <li class="nav-item">
-       <a class="nav-link waves-light" mdbRippleRadius>Pricing</a>
+   <li class="nav-item" [routerLinkActive]="['active']">
+       <a [routerLink]="['/about']"
+        class="nav-link waves-light" mdbRippleRadius>About</a>
    </li>
 
    
@@ -24,10 +25,7 @@
 </ul>
 <!-- Links -->
 
-<!-- Search form -->
-<form class="form-inline  waves-light" mdbRippleRadius>
-   <input class="form-control mr-sm-2" type="text" placeholder="Search">
-</form>
+
 </links>
 <!-- Collapsible content -->
 
