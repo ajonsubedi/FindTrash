@@ -10,6 +10,7 @@ import { FindTrashComponent } from './find-trash/find-trash.component';
 import { transition } from '@angular/core/src/animation/dsl';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GoToFindTrashComponent } from './go-to-find-trash/go-to-find-trash.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { GoToFindTrashComponent } from './go-to-find-trash/go-to-find-trash.comp
     FindTrashComponent,
     PageNotFoundComponent,
     GoToFindTrashComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { GoToFindTrashComponent } from './go-to-find-trash/go-to-find-trash.comp
       {path:'home', component:HomeComponent},
       {path:'find-trash', component:FindTrashComponent},
       {path:'', redirectTo: 'home', pathMatch:'full'},
+      {path:'about', component:AboutComponent},
       {path:'**', component:PageNotFoundComponent}
     ],{useHash:true})    
   ],
