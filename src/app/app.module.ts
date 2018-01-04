@@ -5,11 +5,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FotosComponent } from './fotos/fotos.component';
 import {RouterModule} from "@angular/router";
 import { FindTrashComponent } from './find-trash/find-trash.component';
 import { transition } from '@angular/core/src/animation/dsl';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GoToFindTrashComponent } from './go-to-find-trash/go-to-find-trash.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +17,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     WelcomeComponent,
     NavbarComponent,
-    FotosComponent,
     FindTrashComponent,
     PageNotFoundComponent,
+    GoToFindTrashComponent,
   ],
   imports: [
     BrowserModule,
