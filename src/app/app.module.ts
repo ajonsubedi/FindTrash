@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { ListOfTrashbinsComponent } from './list-of-trashbins/list-of-trashbins.component';
 import { MapComponent } from './map/map.component';
 import {AgmCoreModule} from "@agm/core";
+import {AgmDirectionModule} from "agm-direction";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {AgmCoreModule} from "@agm/core";
       {path:'**', component:PageNotFoundComponent}
     ],{useHash:true}),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDLeQtqpKT1eYPq1HwE8mKeyakfUhqAxx8'})
+      apiKey: 'AIzaSyDLeQtqpKT1eYPq1HwE8mKeyakfUhqAxx8'}),
+      AgmDirectionModule
   ],
   schemas:[NO_ERRORS_SCHEMA],
   providers: [],

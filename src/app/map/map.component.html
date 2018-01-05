@@ -1,16 +1,111 @@
 
-<agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" style="height: 675px; margin-top:10%;">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  <agm-marker [latitude]="trash1.lat" [longitude]="trash1.lng"></agm-marker>
-  <agm-marker [latitude]="trash2.lat" [longitude]="trash2.lng"></agm-marker>
-  <agm-marker [latitude]="trash3.lat" [longitude]="trash3.lng"></agm-marker>
-  <agm-marker [latitude]="trash4.lat" [longitude]="trash4.lng"></agm-marker>
-  <agm-marker [latitude]="trash5.lat" [longitude]="trash5.lng"></agm-marker>
-  <agm-marker [latitude]="trash6.lat" [longitude]="trash6.lng"></agm-marker>
-  <agm-marker [latitude]="trash7.lat" [longitude]="trash7.lng"></agm-marker>
-  <agm-marker [latitude]="trash8.lat" [longitude]="trash8.lng"></agm-marker>
-  <agm-marker [latitude]="trash9.lat" [longitude]="trash9.lng"></agm-marker>
-  <agm-marker [latitude]="trash10.lat" [longitude]="trash10.lng"></agm-marker>
-  
-  
-</agm-map>
+<div class="container">
+    <div class="row">
+     
+      <div class="col">
+        <!--Table-->
+<table class="table" style="margin-top:10%;">
+    
+        <!--Table head-->
+        <thead class="mdb-color darken-3">
+            <tr class="text-white">
+                <th>#</th>
+                <th>Locatie</th>
+                <th>Afstand</th>
+            </tr>
+        </thead>
+        <!--Table head-->
+    
+        <!--Table body-->
+        <tbody>
+            <tr onmouseover="this.style.cursor='pointer';
+                            this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='white'" (click)="getDirectionTrash1()">
+                <th scope="row">1</th>
+                <td>27 Duboisstraat </td>
+                <td></td>
+            </tr>
+            <tr onmouseover="this.style.cursor='pointer';
+            this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='white'" (click)="getDirectionTrash2()">
+                <th scope="row">2</th>
+                <td>Van Aerdtstraat 40</td>
+                <td></td>
+            </tr>
+            <tr onmouseover="this.style.cursor='pointer';
+            this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='white'" (click)="getDirectionTrash3()">
+                <th scope="row">3</th>
+                <td>39 Cassiersstraat</td>
+                <td></td>
+            </tr>
+            <tr onmouseover="this.style.cursor='pointer';
+            this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='white'" (click)="getDirectionTrash4()">
+                <th scope="row">4</th>
+                <td>23 Fuggerstraat</td>
+                <td></td>
+            </tr>
+            <tr onmouseover="this.style.cursor='pointer';
+            this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='white'" (click)="getDirectionTrash5()">
+                <th scope="row">5</th>
+                <td>2 Viaduct-Dam</td>
+                <td></td>
+            </tr>
+            <tr onmouseover="this.style.cursor='pointer';
+            this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='white'" (click)="getDirectionTrash6()">
+                <th scope="row">6</th>
+                <td>2 De Waghemakerestraat</td>
+                <td></td>
+            </tr>
+            <tr onmouseover="this.style.cursor='pointer';
+            this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='white'" (click)="getDirectionTrash7()">
+                <th scope="row">7</th>
+                <td>99 van de Wervestraat</td>
+                <td></td>
+            </tr>
+            <tr onmouseover="this.style.cursor='pointer';
+            this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='white'" (click)="getDirectionTrash8()">
+                <th scope="row">8</th>
+                <td>290 Dambruggestraat</td>
+                <td></td>
+            </tr>
+            <tr onmouseover="this.style.cursor='pointer';
+            this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='white'" (click)="getDirectionTrash9()">
+                <th scope="row">9</th>
+                <td>1 Korte Dijkstraat</td>
+                <td></td>
+            </tr>
+            <tr onmouseover="this.style.cursor='pointer';
+            this.style.backgroundColor='lightgreen';" onmouseout="this.style.backgroundColor='white'" (click)="getDirectionTrash10()">
+                <th scope="row">10</th>
+                <td>27 Marnixstraat antwerp</td>
+                <td></td>
+            </tr>
+        </tbody>
+        <!--Table body-->
+    </table>
+    <!--Table-->
+      </div>
+      
+      <div class="col">
+          <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" style="height: 675px; margin-top:10%;">
+              <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+              <agm-direction *ngIf="dir" [origin]="dir.origin" [destination]="dir.destination"></agm-direction>  
+              <!--<agm-marker [latitude]="trash1.lat" [longitude]="trash1.lng"></agm-marker>
+              <agm-marker [latitude]="trash2.lat" [longitude]="trash2.lng"></agm-marker>
+              <agm-marker [latitude]="trash3.lat" [longitude]="trash3.lng"></agm-marker>
+              <agm-marker [latitude]="trash4.lat" [longitude]="trash4.lng"></agm-marker>
+              <agm-marker [latitude]="trash5.lat" [longitude]="trash5.lng"></agm-marker>
+              <agm-marker [latitude]="trash6.lat" [longitude]="trash6.lng"></agm-marker>
+              <agm-marker [latitude]="trash7.lat" [longitude]="trash7.lng"></agm-marker>
+              <agm-marker [latitude]="trash8.lat" [longitude]="trash8.lng"></agm-marker>
+              <agm-marker [latitude]="trash9.lat" [longitude]="trash9.lng"></agm-marker>
+              <agm-marker [latitude]="trash10.lat" [longitude]="trash10.lng"></agm-marker>-->
+              
+              
+              
+            </agm-map>
+      </div>
+      
+    </div>
+  </div>
+
+
+<button type="button" (click)="getDirection()">Get</button>

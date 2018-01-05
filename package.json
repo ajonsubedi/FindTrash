@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.4.6",
     "@types/lodash": "4.14.85",
+    "agm-direction": "^0.2.2",
     "angular-bootstrap-md": "^5.0.5",
     "angular2-google-maps": "^0.17.0",
     "chart.js": "^2.5.0",
