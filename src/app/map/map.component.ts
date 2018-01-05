@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { google } from '@agm/core/services/google-maps-types';
+import * as geolib from "geolib";
 
 @Component({
   selector: 'app-map',
@@ -11,21 +13,37 @@ export class MapComponent {
   lng:any;
   
   dir = undefined;
-
- 
-
+  
   constructor(){if(navigator){
     navigator.geolocation.getCurrentPosition(pos => {
       this.lng = +pos.coords.longitude;
       this.lat = +pos.coords.latitude;
     })
-   }}
+   }
+  }
+  //GET DISTANCE  
+   trash1Distance:any= geolib.getDistance({longitude:4.416172, latitude:51.230130},{longitude: 4.415600, latitude:51.228788}) + "m";
+   trash2Distance:any= geolib.getDistance({longitude:4.416172, latitude:51.230130},{longitude: 4.416908, latitude:51.227772}) + "m";
+   trash3Distance:any= geolib.getDistance({longitude:4.416172, latitude:51.230130},{longitude: 4.417005, latitude:51.227088}) + "m";
+   trash4Distance:any= geolib.getDistance({longitude:4.416172, latitude:51.230130},{longitude: 4.418815, latitude:51.228876}) + "m";
+   trash5Distance:any= geolib.getDistance({longitude:4.416172, latitude:51.230130},{longitude: 4.421133, latitude:51.229796}) + "m";
+   trash6Distance:any= geolib.getDistance({longitude:4.416172, latitude:51.230130},{longitude: 4.414690, latitude:51.228046}) + "m";
+   trash7Distance:any= geolib.getDistance({longitude:4.416172, latitude:51.230130},{longitude: 4.416853, latitude:51.2260333}) + "m";
+   trash8Distance:any= geolib.getDistance({longitude:4.416172, latitude:51.230130},{longitude: 4.422158, latitude:51.227461}) + "m";
+   trash9Distance:any= geolib.getDistance({longitude:4.416172, latitude:51.230130},{longitude: 4.419846, latitude:51.228946}) + "m";
+   trash10Distance:any= geolib.getDistance({longitude:4.416172, latitude:51.230130},{longitude: 4.420739, latitude:51.228167}) + "m";
+   
+  
+
+
+   //import1:any= this.trash.document.getElementById("distanceTrash1");
+   
 
   public getDirectionTrash1(){
     
     this.dir = {
       
-      origin: {lat:51.229738, lng:4.450757 },
+      origin: {lat:51.230130, lng:4.416172 },
       destination:{lat: 51.228788, lng:4.415600}
     }
   }
@@ -34,7 +52,7 @@ export class MapComponent {
     
     this.dir = {
       
-      origin: {lat:51.229738, lng:4.450757 },
+      origin: {lat:51.230130, lng:4.416172  },
       destination:{lat: 51.227772, lng:4.416908}
     }
   }
@@ -43,7 +61,7 @@ export class MapComponent {
     
     this.dir = {
       
-      origin: {lat:51.229738, lng:4.450757 },
+      origin: {lat:51.230130, lng:4.416172  },
       destination:{lat: 51.227088, lng:4.417005}
     }
   }
@@ -52,7 +70,7 @@ export class MapComponent {
     
     this.dir = {
       
-      origin: {lat:51.229738, lng:4.450757 },
+      origin: {lat:51.230130, lng:4.416172  },
       destination:{lat: 51.228876, lng:4.418815}
     }
   }
@@ -61,7 +79,7 @@ export class MapComponent {
     
     this.dir = {
       
-      origin: {lat:51.229738, lng:4.450757 },
+      origin: {lat:51.230130, lng:4.416172  },
       destination:{lat: 51.229796, lng:4.421133}
     }
   }
@@ -70,7 +88,7 @@ export class MapComponent {
     
     this.dir = {
       
-      origin: {lat:51.229738, lng:4.450757 },
+      origin: {lat:51.230130, lng:4.416172 },
       destination:{lat: 51.228046, lng:4.414690}
     }
   }
@@ -79,7 +97,7 @@ export class MapComponent {
     
     this.dir = {
       
-      origin: {lat:51.229738, lng:4.450757 },
+      origin: {lat:51.230130, lng:4.416172 },
       destination:{lat: 51.2260333, lng:4.416853}
     }
   }
@@ -88,7 +106,7 @@ export class MapComponent {
     
     this.dir = {
       
-      origin: {lat:51.229738, lng:4.450757 },
+      origin: {lat:51.230130, lng:4.416172  },
       destination:{lat: 51.227461, lng:4.422158}
     }
   }
@@ -97,7 +115,7 @@ export class MapComponent {
     
     this.dir = {
       
-      origin: {lat:51.229738, lng:4.450757 },
+      origin: {lat:51.230130, lng:4.416172 },
       destination:{lat: 51.228946, lng:4.419846}
     }
   }
@@ -106,7 +124,7 @@ export class MapComponent {
     
     this.dir = {
       
-      origin: {lat:51.229738, lng:4.450757 },
+      origin: {lat:51.230130, lng:4.416172 },
       destination:{lat: 51.228167, lng:4.420739}
     }
   }

@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import {RouterModule} from "@angular/router";
+import { RouterModule} from "@angular/router";
 import { FindTrashComponent } from './find-trash/find-trash.component';
 import { transition } from '@angular/core/src/animation/dsl';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -13,8 +13,8 @@ import { GoToFindTrashComponent } from './go-to-find-trash/go-to-find-trash.comp
 import { AboutComponent } from './about/about.component';
 import { ListOfTrashbinsComponent } from './list-of-trashbins/list-of-trashbins.component';
 import { MapComponent } from './map/map.component';
-import {AgmCoreModule} from "@agm/core";
-import {AgmDirectionModule} from "agm-direction";
+import { AgmCoreModule} from "@agm/core";
+import { AgmDirectionModule} from "agm-direction";
 
 @NgModule({
   declarations: [
@@ -41,7 +41,8 @@ import {AgmDirectionModule} from "agm-direction";
     ],{useHash:true}),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDLeQtqpKT1eYPq1HwE8mKeyakfUhqAxx8'}),
-      AgmDirectionModule
+      AgmDirectionModule,
+      
   ],
   schemas:[NO_ERRORS_SCHEMA],
   providers: [],
