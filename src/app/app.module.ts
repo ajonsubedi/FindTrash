@@ -11,6 +11,9 @@ import { transition } from '@angular/core/src/animation/dsl';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GoToFindTrashComponent } from './go-to-find-trash/go-to-find-trash.component';
 import { AboutComponent } from './about/about.component';
+import { ListOfTrashbinsComponent } from './list-of-trashbins/list-of-trashbins.component';
+import { MapComponent } from './map/map.component';
+import {AgmCoreModule} from "@agm/core";
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { AboutComponent } from './about/about.component';
     PageNotFoundComponent,
     GoToFindTrashComponent,
     AboutComponent,
+    ListOfTrashbinsComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,9 @@ import { AboutComponent } from './about/about.component';
       {path:'', redirectTo: 'home', pathMatch:'full'},
       {path:'about', component:AboutComponent},
       {path:'**', component:PageNotFoundComponent}
-    ],{useHash:true})    
+    ],{useHash:true}),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDLeQtqpKT1eYPq1HwE8mKeyakfUhqAxx8'})
   ],
   schemas:[NO_ERRORS_SCHEMA],
   providers: [],
